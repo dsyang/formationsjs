@@ -62,7 +62,7 @@
 						</h2>
 					</div>
 					<div class="text-right row display-options">
-						<span class="col-md-4 text-left">
+						<span class="col-md-3 text-left">
 							<button type="button" class="btn btn-info btn-xs" id="make-stage-image"
 											data-toggle="modal" data-target="#stage-image-modal">
 								Make Image
@@ -90,12 +90,31 @@
 							</button>
 						</span>
 
-						<span class="col-md-2">
-							<label><input type="checkbox" value="" id="display-names"/>Display Names</label>
-						</span>
-						<span class="col-md-2">
-							<label><input type="checkbox" id="display-grid" checked="checked">
-								Display Grid</label>
+						<span class="col-md-5">
+							<div class="row">
+								<span class="col-md-5 col-md-offset-2 text-left">
+									<div class="row">
+										<label class="col-md-6">
+											<input type="checkbox" value="" id="display-in-arrows"/>In
+											<span class="glyphicon glyphicon-arrow-right"></span>
+										</label>
+										<label class="col-md-6">
+											<input type="checkbox" value="" id="display-out-arrows"/>Out
+											<span class="glyphicon glyphicon-arrow-right"></span>
+										</label>
+									</div>
+								</span>
+								<span class="col-md-5  text-left">
+									<div class="row">
+										<label class="col-md-6">
+											<input type="checkbox" value="" id="display-names"/>Names
+										</label>
+										<label class="col-md-6">
+											<input type="checkbox" id="display-grid" checked="checked">Grid
+										</label>
+									</div>
+								</span>
+							</div>
 						</span>
 					</div>
 					<canvas id="stage-canvas" width="800" height="400" data-resize="full">
@@ -115,7 +134,19 @@
 							</div>
 							<div id="formation-options" class="panel-collapse collapse">
 								<div class="panel-body">
+									<div class="form-group row">
+										<div class="h5 text-center"> <p>Transitions</p> </div>
+										<button type="button" class="col-md-6 btn btn-default" id="transition-add-in-arrow">
+											<span class="glyphicon glyphicon-plus"></span>
+											In arrow
+										</button>
+										<button type="button" class="col-md-6 btn btn-default" id="transition-add-out-arrow">
+											<span class="glyphicon glyphicon-plus"></span>
+											Out arrow
+										</button>
+									</div>
 									<div class="form-group">
+										<div class="h5 text-center"> <p>Misc.</p> </div>
 										<button type="button" class="btn btn-default" id="formation-add-frame">
 											<span class="glyphicon glyphicon-plus"></span>
 											Add Frame
@@ -175,8 +206,6 @@
 								</div>
 							</div>
 						</div>
-
-
 					</div>
 				</div>
 
@@ -208,6 +237,7 @@
 					<script src="js/util.js"></script>
 					<script src="js/dancer.js"></script>
 					<script src="js/marker.js"></script>
+					<script src="js/arrows.js"></script>
 					<script src="js/stage.js"></script>
 					<script src="js/main.js"></script>
 

@@ -1,5 +1,7 @@
 function main_init(elemid) {
 		var stage  = new Stage(document.getElementById(elemid));
+		stage.displayInArrows = $("#display-in-arrows").prop("checked");
+		stage.displayOutArrows = $("#display-out-arrows").prop("checked");
 		stage.displayNames = $("#display-names").prop("checked");
 		stage.displayGrid = $("#display-grid").prop("checked");
 		var str = loadPageVar("stage");

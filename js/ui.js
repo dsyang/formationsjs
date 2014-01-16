@@ -1,3 +1,14 @@
+$("#display-in-arrows").change(function() {
+		console.log("changing");
+		stage.displayInArrows = !stage.displayInArrows;
+		stage.draw();
+});
+
+$("#display-out-arrows").change(function() {
+		stage.displayOutArrows = !stage.displayOutArrows;
+		stage.draw();
+});
+
 $("#display-names").change(function() {
 		stage.displayNames = !stage.displayNames;
 		stage.draw();
@@ -44,6 +55,22 @@ $("#num-marker-input-submit").click(function() {
 		console.log("Setting", numHorz, numVert);
 		stage.setMarkers(numHorz, numVert);
 		stage.draw();
+});
+
+$("#transition-add-in-arrow").click(function() {
+		if (!stage.displayInArrows) {
+				console.log("Not showing in arrows");
+		} else {
+				console.log("everythng good");
+		}
+});
+
+$("#transition-add-out-arrow").click(function() {
+		if (!stage.displayOutArrows) {
+				console.log("Not showing out arrows");
+		} else {
+				console.log("everythng good out");
+		}
 });
 
 $("#formation-add-frame").click(function() {

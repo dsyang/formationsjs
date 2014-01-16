@@ -21,6 +21,9 @@ function Stage(canvas) {
 		this.dancerCount = 0;
 		this.dancers = new DancersList(document.getElementById('dancers'));
 
+		this.arrows = new ArrowsList();
+		// [0] in-arrows for frame 1, [1] out-arrows frame 1/in-arrows frame 2
+
 		var self = this;
 		this._listeners = {
 				mousemove: function() { self._onMouseMove.apply(self, arguments); },
